@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ClassifierVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ClassifierVC" customModule="EyeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-gU-uC2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw0-Dm-gku" customClass="RoundedVEV" customModule="EyeApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="507" width="335" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G85-4s-Aqc">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera button to choose an image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yax-lE-E2q">
+                                            <rect key="frame" x="5" y="10" width="320" height="65"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yax-lE-E2q" firstAttribute="leading" secondItem="G85-4s-Aqc" secondAttribute="leading" constant="5" id="2jN-sQ-Ryd"/>
+                                        <constraint firstAttribute="trailing" secondItem="yax-lE-E2q" secondAttribute="trailing" constant="10" id="ZvS-lp-zA0"/>
+                                        <constraint firstAttribute="bottom" secondItem="yax-lE-E2q" secondAttribute="bottom" constant="5" id="cQK-GX-Qtu"/>
+                                        <constraint firstItem="yax-lE-E2q" firstAttribute="top" secondItem="G85-4s-Aqc" secondAttribute="top" constant="10" id="jTm-Up-QcH"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.52921660958904104" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="euq-Lk-jWe"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5I-y6-09H">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77p-YD-6NM">
+                                        <rect key="frame" x="16" y="5" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9de-98-ext">
+                                        <rect key="frame" x="10" y="5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="cameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVT-0U-rgH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.075527442890000004" green="0.075527442890000004" blue="0.075527442890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9de-98-ext" secondAttribute="bottom" constant="5" id="OMl-rq-Wsw"/>
+                                    <constraint firstItem="9de-98-ext" firstAttribute="leading" secondItem="f5I-y6-09H" secondAttribute="leading" constant="10" id="Y07-ia-7aH"/>
+                                    <constraint firstItem="9de-98-ext" firstAttribute="top" secondItem="f5I-y6-09H" secondAttribute="top" constant="5" id="kEK-8c-SKX"/>
+                                    <constraint firstAttribute="height" constant="40" id="mGQ-w1-NS4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f5I-y6-09H" firstAttribute="top" secondItem="Dw0-Dm-gku" secondAttribute="bottom" constant="40" id="EMg-mZ-qnD"/>
+                            <constraint firstItem="4CW-gU-uC2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="H3B-pI-4iw"/>
+                            <constraint firstItem="4CW-gU-uC2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HE6-pg-ZhU"/>
+                            <constraint firstItem="4CW-gU-uC2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JRY-by-7Cc"/>
+                            <constraint firstItem="Dw0-Dm-gku" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K4Y-Zx-2OH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dw0-Dm-gku" secondAttribute="trailing" constant="20" id="mcY-Bh-Jlw"/>
+                            <constraint firstItem="4CW-gU-uC2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="om1-7C-4fV"/>
+                            <constraint firstItem="f5I-y6-09H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qTO-wp-J7d"/>
+                            <constraint firstItem="f5I-y6-09H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xTC-Qw-mh7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5I-y6-09H" secondAttribute="trailing" id="zoU-LH-jUV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="classficationData" destination="yax-lE-E2q" id="tLu-9M-IyE"/>
+                        <outlet property="classificationLabel" destination="yax-lE-E2q" id="KDF-i8-cdU"/>
+                        <outlet property="imageView" destination="4CW-gU-uC2" id="3RG-gJ-fhC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

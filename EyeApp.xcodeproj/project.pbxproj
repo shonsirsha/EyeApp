@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B566798521AC3F8700383CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566798421AC3F8700383CFE /* AppDelegate.swift */; };
-		B566798721AC3F8700383CFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566798621AC3F8700383CFE /* ViewController.swift */; };
 		B566798A21AC3F8700383CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B566798821AC3F8700383CFE /* Main.storyboard */; };
 		B566798C21AC3F8C00383CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B566798B21AC3F8C00383CFE /* Assets.xcassets */; };
 		B566798F21AC3F8C00383CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B566798D21AC3F8C00383CFE /* LaunchScreen.storyboard */; };
+		B566799721AC44C800383CFE /* ClassifierVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566799621AC44C800383CFE /* ClassifierVC.swift */; };
+		B566799921AC456E00383CFE /* RoundedVEV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566799821AC456E00383CFE /* RoundedVEV.swift */; };
+		B5D75E0C21CB5EB900898B41 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5D75E0B21CB5EB900898B41 /* FruitClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B566798121AC3F8700383CFE /* WhoDisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoDisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B566798121AC3F8700383CFE /* EyeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B566798421AC3F8700383CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B566798621AC3F8700383CFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B566798921AC3F8700383CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B566798B21AC3F8C00383CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B566798E21AC3F8C00383CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B566799021AC3F8C00383CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B566799621AC44C800383CFE /* ClassifierVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifierVC.swift; sourceTree = "<group>"; };
+		B566799821AC456E00383CFE /* RoundedVEV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedVEV.swift; sourceTree = "<group>"; };
+		B5D75E0B21CB5EB900898B41 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,7 @@
 		B566798221AC3F8700383CFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B566798121AC3F8700383CFE /* WhoDisApp.app */,
+				B566798121AC3F8700383CFE /* EyeApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,22 +58,40 @@
 		B566798321AC3F8700383CFE /* WhoDisApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5D75E0B21CB5EB900898B41 /* FruitClassifier.mlmodel */,
+				B566799B21AC46D300383CFE /* View */,
+				B566799A21AC46CA00383CFE /* Controller */,
 				B566798421AC3F8700383CFE /* AppDelegate.swift */,
-				B566798621AC3F8700383CFE /* ViewController.swift */,
 				B566798821AC3F8700383CFE /* Main.storyboard */,
 				B566798B21AC3F8C00383CFE /* Assets.xcassets */,
-				B566798D21AC3F8C00383CFE /* LaunchScreen.storyboard */,
 				B566799021AC3F8C00383CFE /* Info.plist */,
+				B566798D21AC3F8C00383CFE /* LaunchScreen.storyboard */,
 			);
 			path = WhoDisApp;
+			sourceTree = "<group>";
+		};
+		B566799A21AC46CA00383CFE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B566799621AC44C800383CFE /* ClassifierVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B566799B21AC46D300383CFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B566799821AC456E00383CFE /* RoundedVEV.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B566798021AC3F8700383CFE /* WhoDisApp */ = {
+		B566798021AC3F8700383CFE /* EyeApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B566799321AC3F8C00383CFE /* Build configuration list for PBXNativeTarget "WhoDisApp" */;
+			buildConfigurationList = B566799321AC3F8C00383CFE /* Build configuration list for PBXNativeTarget "EyeApp" */;
 			buildPhases = (
 				B566797D21AC3F8700383CFE /* Sources */,
 				B566797E21AC3F8700383CFE /* Frameworks */,
@@ -79,9 +101,9 @@
 			);
 			dependencies = (
 			);
-			name = WhoDisApp;
+			name = EyeApp;
 			productName = WhoDisApp;
-			productReference = B566798121AC3F8700383CFE /* WhoDisApp.app */;
+			productReference = B566798121AC3F8700383CFE /* EyeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B566797C21AC3F8700383CFE /* Build configuration list for PBXProject "WhoDisApp" */;
+			buildConfigurationList = B566797C21AC3F8700383CFE /* Build configuration list for PBXProject "EyeApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B566798021AC3F8700383CFE /* WhoDisApp */,
+				B566798021AC3F8700383CFE /* EyeApp */,
 			);
 		};
 /* End PBXProject section */
@@ -135,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B566798721AC3F8700383CFE /* ViewController.swift in Sources */,
 				B566798521AC3F8700383CFE /* AppDelegate.swift in Sources */,
+				B566799921AC456E00383CFE /* RoundedVEV.swift in Sources */,
+				B5D75E0C21CB5EB900898B41 /* FruitClassifier.mlmodel in Sources */,
+				B566799721AC44C800383CFE /* ClassifierVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,12 +309,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q33X652UWU;
 				INFOPLIST_FILE = WhoDisApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seansaoirse.WhoDisApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seansaoirse.EyeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,12 +328,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q33X652UWU;
 				INFOPLIST_FILE = WhoDisApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seansaoirse.WhoDisApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seansaoirse.EyeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B566797C21AC3F8700383CFE /* Build configuration list for PBXProject "WhoDisApp" */ = {
+		B566797C21AC3F8700383CFE /* Build configuration list for PBXProject "EyeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B566799121AC3F8C00383CFE /* Debug */,
@@ -328,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B566799321AC3F8C00383CFE /* Build configuration list for PBXNativeTarget "WhoDisApp" */ = {
+		B566799321AC3F8C00383CFE /* Build configuration list for PBXNativeTarget "EyeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B566799421AC3F8C00383CFE /* Debug */,

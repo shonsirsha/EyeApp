@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WhoDisApp.xcodeproj">
+      location = "self:/Users/seansaoirse/Desktop/programmin/learnswift/WhoDis/Fruit/EyeApp.xcodeproj">
    </FileRef>
 </Workspace>
